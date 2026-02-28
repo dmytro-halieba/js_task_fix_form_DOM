@@ -7,11 +7,11 @@ const signUpInputs = Array.from(signUpForm.getElementsByTagName('input'));
 const signInInputs = Array.from(signInForm.getElementsByTagName('input'));
 
 signUpInputs.forEach((input) => {
-  input.placeholder = input.name;
+  input.placeholder = input.name[0].toUpperCase() + input.name.slice(1);
 
   const label = document.createElement('label');
 
-  label.textContent = input.name[0].toUpperCase() + input.name.slice(1);
+  label.textContent = input.name;
   label.className = 'field-label';
   label.setAttribute('for', input.id);
 
@@ -19,11 +19,11 @@ signUpInputs.forEach((input) => {
 });
 
 signInInputs.forEach((input) => {
-  input.placeholder = input.name;
+  input.placeholder = input.name[0].toUpperCase() + input.name.slice(1);
 
   const label = document.createElement('label');
 
-  label.textContent = input.name[0].toUpperCase() + input.name.slice(1);
+  label.textContent = input.name;
   label.className = 'field-label';
   label.setAttribute('for', input.id);
 
