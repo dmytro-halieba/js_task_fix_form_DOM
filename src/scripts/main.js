@@ -11,8 +11,9 @@ signUpInputs.forEach((input) => {
 
   const label = document.createElement('label');
 
-  label.textContent = input.name;
+  label.textContent = input.name[0].toUpperCase() + input.name.slice(1);
   label.className = 'field-label';
+  label.setAttribute('for', input.id);
 
   input.parentNode.insertBefore(label, input);
 });
@@ -22,8 +23,9 @@ signInInputs.forEach((input) => {
 
   const label = document.createElement('label');
 
-  label.textContent = input.name;
+  label.textContent = input.name[0].toUpperCase() + input.name.slice(1);
   label.className = 'field-label';
+  label.setAttribute('for', input.id);
 
   input.parentNode.insertBefore(label, input);
 });
